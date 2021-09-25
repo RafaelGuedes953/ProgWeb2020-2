@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- Este documento é o exemplo solicitado na questão 3 e 4 
+    do exercício 3 de Programação Web-->
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Questão 3-4</title>
+    <style>
+        h1.titulo {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        .tituloForm {
+            font-family: 'Franklin Gothic Medium';
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class=titulo>Este é um código exemplo, feito em html e formatado com css</h1>
+
+    <p style="font-family: 'Franklin Gothic Medium'">Este é um exemplo de texto na tag p <br>Com quebra de linha (tag
+        br)</p>
+
+    <figure>
+        <img src="imgExemplo.jpg" class="foto">
+        <figcaption>
+            Foto de <a href="encurtador.com.br/gtzW9">Vlad Bagacian</a> por <a
+                href="encurtador.com.br/jqsB6">Pixabay</a>
+        </figcaption>
+    </figure>
+
+    <div>
+        <p class="tituloForm">Exemplo de formulário HTML5</p>
+        <form class="html5" method="POST">
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="sobren">Sobrenome:</label><br>
+            <input type="text" id="lname" name="lname">
+            <p><label for="upload">Envie </label><input type="file" name="upload" /></p>
+            <p><label for="limpar">Limpar </label><input type="reset" name="limpar" /></p>
+        </form>
+    </div>
+
+    <p class="tituloForm">Exemplo de formulário HTML (Antigo)</p>
+    <form class="html">
+        <p><label for="name">Nome </label><input type="text" id="name" name="nome" maxlength="35" /></p>
+        <p><label for="senha">Senha </label><input type="password" name="senha" maxlength="8"></p>
+        <p><label for="noticias">Escolha </label><input type="checkbox" name="noticias"/></p>
+        <p><label for="enviar">Enviar </label><input type="submit"name="enviar"/></p>
+    </form>
+</body>
+
+</html>
