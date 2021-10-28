@@ -14,26 +14,33 @@
     <hr>
 
     <section id="cadastroAlunos">
-        <form action="#">
-            <span>Cadastre um aluno da academia</span>
+        <form action="#" id="cadastro">
+            <span>Cadastre um aluno na academia</span>
 
-            <div>
-                <input class="input-nome" type="text" name="nome" id="nome" placeholder="Nome">
+            <div id="formCampos">
+                <input class="input-nome" type="text" name="nome" id="nome" placeholder="Nome"><br>
+                <input class="input-esporte" type="text" name="esporte" id="esporte" placeholder="Esporte de interesse"><br>
+                <input class="input-telefone" type="text" name="telefone" id="telefone" placeholder="Telefone"><br>
             </div>
-            <div>
-                <input class="input-esporte" type="text" name="nome" id="nome" placeholder="Esporte de interesse">
-            </div>
-            <div>
-                <input class="input-telefone" type="text" name="nome" id="nome" placeholder="Telefone">
-            </div>
+            <button id="btn">Cadastrar</button>
         </form>
     </section>
 
     <section id="dadosAlunos">
-        <table border="1">
+        <table id="tableDados">
             <thead>
-                <td id="formTitle">Titulo</td>
+                <tr>
+                    <th id="formTitle" colspan="4">Dados dos alunos</th>
+                </tr>
+                <tr>
+                    <th>Nome</th>
+                    <th>Esporte de Interesse</th>
+                    <th>Telefone</th>
+                    <th>Ações</th>
+                </tr>
+                
             </thead>
+            
             <tbody>
                 <tr>
                     <td>Item 1</td>

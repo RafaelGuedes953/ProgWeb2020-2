@@ -49,6 +49,6 @@ function deleteStudent(idStu){
 
 }
 
-function insertStudent(idStu){
+function insertStudent(){
 
 }

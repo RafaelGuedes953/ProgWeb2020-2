@@ -22,17 +22,78 @@
     src: url('fonts/poppins/Poppins-SemiBold.ttf'); 
 }
 
+body, html {
+	height: 100%;
+	font-family: Poppins-Regular, sans-serif;
+    background-color: lavender;
+}
 
+/* Formatação da tabela */
 h1#Title{
     font-family: Poppins-Bold;
     text-align: center;
 }
 
-td#formTitle{
-    text-align: center;
+table#tableDados{
+    font-size: 1.1em;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 57%;
+    margin-top: 5%;
+    table-layout: fixed;
 }
 
-body, html {
-	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
+table#tableDados td {
+    text-align: center;
+    border: 1px solid black;
 }
+ 
+table#tableDados th {
+    text-align: center;
+    border: 1px solid black;
+}
+
+table#tableDados th#formTitle {
+    text-align: center;
+    border: 0px;
+}
+/* Fim da formatação da tabela */
+
+/* Formatação do formulário*/
+form span {
+    font-family: Poppins-SemiBold;
+    font-size: x-large;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+}
+
+form#cadastro{
+    /*border: 1px solid #ccc;*/
+    padding: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 50px;
+}
+
+form#cadastro input {
+    padding: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    display: block;
+}
+
+form#cadastro button {
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    display: flex;
+    font-size: large;
+    padding: 5px;
+}
+/* Fim da formatação do formulário */
