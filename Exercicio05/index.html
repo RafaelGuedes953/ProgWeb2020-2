@@ -6,23 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/jquery.js"></script> <!--Inclusão do jquery necessário-->
+    <script src="js/database.js"></script>
     <title>WebFitness - Sistema de Academia</title>
 </head>
 
-<body>
+<!--Criar o banco de dados assim que o navegador terminar de carregar a página-->
+<body onload="createDatabase()">
     <h1 id="Title">WEB Fitness</h1>
     <hr>
 
     <section id="cadastroAlunos">
-        <form action="#" id="cadastro">
+        <form id="cadastro">
             <span>Cadastre um aluno na academia</span>
 
             <div id="formCampos">
-                <input class="input-nome" type="text" name="nome" id="nome" placeholder="Nome"><br>
-                <input class="input-esporte" type="text" name="esporte" id="esporte" placeholder="Esporte de interesse"><br>
-                <input class="input-telefone" type="text" name="telefone" id="telefone" placeholder="Telefone"><br>
+                <input class="input-nome" type="text" name="nome" id="nome" placeholder="Nome" required><br>
+                <input class="input-esp" type="text" name="esporte" id="esporte" placeholder="Esporte" required><br>
+                <input class="input-tel" type="text" name="telefone" id="telefone" placeholder="Telefone" required><br>
             </div>
-            <button id="btn">Cadastrar</button>
+            <button id="btn-cad" onclick="insertStudent()" type="button">Cadastrar</button>
+            <button id="btn-ver" onclick="verifyBrowser()" type="button">Verificar Browser</button>
+            <button id="btn-recov" onclick="selectStudent()" type="button">Recuperar Dados</button>
         </form>
     </section>
 
@@ -30,11 +35,12 @@
         <table id="tableDados">
             <thead>
                 <tr>
-                    <th id="formTitle" colspan="4">Dados dos alunos</th>
+                    <th id="formTitle" colspan="5">Dados dos alunos</th>
                 </tr>
                 <tr>
+                    <th>Id</th>
                     <th>Nome</th>
-                    <th>Esporte de Interesse</th>
+                    <th>Esporte</th>
                     <th>Telefone</th>
                     <th>Ações</th>
                 </tr>
@@ -43,18 +49,28 @@
             
             <tbody>
                 <tr>
+                    <td>1</td>
                     <td>Item 1</td>
                     <td>Item 2</td>
                     <td>Item 3</td>
                     <td><button>Deletar</button></td>
                 </tr>
                 <tr>
+                    <td>2</td>
                     <td>Item 1</td>
                     <td>Item 2</td>
                     <td>Item 3</td>
                     <td><button>Deletar</button></td>
                 </tr>
                 <tr>
+                    <td>3</td>
+                    <td>Item 1</td>
+                    <td>Item 2</td>
+                    <td>Item 3</td>
+                    <td><button>Deletar</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
                     <td>Item 1</td>
                     <td>Item 2</td>
                     <td>Item 3</td>
