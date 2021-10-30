@@ -53,8 +53,6 @@ function validatePass() {
 
 // Função utilizada no html (utilizará a validateCPF e validatePass)
 function validateForm() {
-    
-    //console.log("Validei?"); //debug
 
     if((validateCPF() && validatePass())==true)
         alert("Login realizado com sucesso, parabéns!");
