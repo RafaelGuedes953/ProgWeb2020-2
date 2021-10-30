@@ -12,12 +12,12 @@
 </head>
 
 <!--Criar o banco de dados assim que o navegador terminar de carregar a página-->
-<body onload="createDatabase()">
+<body onload="createTable(), listTable()">
     <h1 id="Title">WEB Fitness</h1>
     <hr>
 
     <section id="cadastroAlunos">
-        <form id="cadastro">
+        <form id="cadastro" onsubmit="insertStudent()">
             <span>Cadastre um aluno na academia</span>
 
             <div id="formCampos">
@@ -25,9 +25,10 @@
                 <input class="input-esp" type="text" name="esporte" id="esporte" placeholder="Esporte" required><br>
                 <input class="input-tel" type="text" name="telefone" id="telefone" placeholder="Telefone" required><br>
             </div>
-            <button id="btn-cad" onclick="insertStudent()" type="button">Cadastrar</button>
+            <input type="submit" value="Enviar" class="button">
             <button id="btn-ver" onclick="verifyBrowser()" type="button">Verificar Browser</button>
             <button id="btn-recov" onclick="selectStudent()" type="button">Recuperar Dados</button>
+            <button id="btn-del" onclick="deleteTable()" type="button">Deletar tabela</button>
         </form>
     </section>
 
@@ -35,7 +36,7 @@
         <table id="tableDados">
             <thead>
                 <tr>
-                    <th id="formTitle" colspan="5">Dados dos alunos</th>
+                    <th id="formTitle" colspan="5">Dados dos clientes</th>
                 </tr>
                 <tr>
                     <th>Id</th>
@@ -47,36 +48,12 @@
                 
             </thead>
             
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Item 1</td>
-                    <td>Item 2</td>
-                    <td>Item 3</td>
-                    <td><button>Deletar</button></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Item 1</td>
-                    <td>Item 2</td>
-                    <td>Item 3</td>
-                    <td><button>Deletar</button></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Item 1</td>
-                    <td>Item 2</td>
-                    <td>Item 3</td>
-                    <td><button>Deletar</button></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Item 1</td>
-                    <td>Item 2</td>
-                    <td>Item 3</td>
-                    <td><button>Deletar</button></td>
-                </tr>
+            <tbody id="tableBody">
+                <!--Dados serão adicionados pela função listTable ao recarregar a página ou clicar em Atualizar tabela-->
             </tbody>
+            <tfoot>
+                <button id="btn-show" onclick="listTable()" type="button" class="button">Atualizar tabela</button>
+            </tfoot>
         </table>
     </section>
 

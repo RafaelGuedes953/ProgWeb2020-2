@@ -58,6 +58,10 @@ table#tableDados th#formTitle {
     text-align: center;
     border: 0px;
 }
+
+.icon {
+    max-width: 100%;
+}
 /* Fim da formatação da tabela */
 
 /* Formatação do formulário*/
@@ -92,9 +96,25 @@ form#cadastro button {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
+    display: flex;
+    font-size: large;
+    padding: 5px;
+    font-family: Poppins-Regular;
+    font-size: medium;
+    justify-content: center;
+    
+}
+
+.button {
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
     justify-content: center;
     display: flex;
     font-size: large;
     padding: 5px;
+    font-family: Poppins-Medium;
 }
 /* Fim da formatação do formulário */
