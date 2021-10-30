@@ -1,6 +1,4 @@
-<?PHP
-
-
+<?php
 # dados para conexão com o banco de dados
 
 $servidor = 'localhost';
@@ -37,27 +35,8 @@ if ($acao == "adicionar") {
     }
     else {
         // Caso sucesso, mostra na tela
-        echo 'A operação foi realizada com sucesso.';
+        echo 'O cadastro foi realizado com sucesso!';
+        //echo '<script type="text/javascript">window.location="cadastro.html"</script>';
     }
 }
 ?>
-
-<!--
-<center><a href="visualizar-registro.php">VISUALIZAR REGISTROS</a>
-    <p>
-</center>
-
-<br /><br />
-
-<center><a href="cadastrar-registro.php">INSERIR NOVO REGISTRO</a>
-    <p>
-</center>
-
-<br /><br />
-
-<center><a href="visualizarealterar-registro.php">ALTERAR REGISTRO</a></center>
-
-<br /><br />
-
-<center><a href="visualizareexcluir-registro.php">EXCLUIR REGISTRO</a></center>
--->

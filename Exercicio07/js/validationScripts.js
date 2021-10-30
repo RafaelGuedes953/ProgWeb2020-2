@@ -41,20 +41,35 @@ function validateCPF() {
 
 function validatePass() {
     var txt_pass = document.getElementById("pass").value; // Pega valor do elemento de acordo com o ID
+    var passRep = document.getElementById("passRep");
+    
+    if(passRep != null){
+        var rep_pass = passRep.value;
+    }
 
-    //verificar se a senha contém números
-    if(isNaN(txt_pass)){
+    if(isNaN(txt_pass)){ //verificar se a senha contém números
         alert("A senha contém letras, e deve possuir apenas números!");
         return false;
     }
 
+    //Verificar se as senhas do cadastro são iguais
+    if((txt_pass != rep_pass) && (rep_pass!=null)){
+        alert("As senhas devem ser iguais!");
+        return false;
+    }
+    
     return true;
 }
 
 // Função utilizada no html (utilizará a validateCPF e validatePass)
 function validateForm() {
 
-    if((validateCPF() && validatePass())==true)
-        alert("Login realizado com sucesso, parabéns!");
+    if((validateCPF() && validatePass())==true){
+        //alert("Dados validados com sucesso"); //debug
+        console.log("Dados validados...");
+    }
+    else{
+        alert("Algo deu errado");
+    }
 
 }
